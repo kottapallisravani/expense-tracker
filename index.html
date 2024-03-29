@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker App</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* Custom CSS for button colors */
+        .delete-btn,
+        .edit-btn,
+        .btn-primary {
+            padding: 8px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .delete-btn:hover,
+        .edit-btn:hover,
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        /* Custom CSS for form colors */
+        .form-control {
+            border-color: #ced4da;
+            color: #495057;
+        }
+        .form-control:focus {
+            border-color: #80bdff;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+        /* Custom header style */
+        .header {
+            background-color: #343a40; /* Dark Grey */
+            color: #ffffff; /* White */
+            padding: 20px;
+            border-radius: 0;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body style="background-color: #f8f9fa;"> <!-- Light Grey background -->
+
+    <div>
+        <div>
+            <div class="card-body">
+                <div class="header">
+                    <h1 class="card-title text-center mb-0">Expense Tracker App</h1>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="category-select">Category:</label>
+                    </div>
+                    <select id="category-select" class="custom-select">
+                        <option value="Food & Beverage">Food & Beverage</option>
+                        <option value="Rent">Rent</option>
+                        <option value="Transport">Transport</option>
+                        <option value="Relaxing">Relaxing</option>
+                    </select>
+                    <input type="number" id="amount-input" class="form-control ml-3" placeholder="Amount">
+                    <div class="input-group-append">
+                        <button id="add-btn" class="btn btn-primary">Add</button>
+                    </div>
+                    <input type="date" id="date-input" class="form-control ml-3">
+                </div>
+                <div class="expenses-list">
+                    <h2 class="text-center mb-4">Expenses List</h2>
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Category</th>
+                                <th>Amount</th>
+                                <th>Date</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="expense-table-body"></tbody>
+                        <tfoot>
+                            <tr>
+                                <td>Total:</td>
+                                <td id="total-amount"></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Your script.js file -->
+    <script src="script.js"></script>
+
+</body>
+</html>
